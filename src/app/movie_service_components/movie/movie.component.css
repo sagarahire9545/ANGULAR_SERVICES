@@ -1,0 +1,111 @@
+.modal{
+    /* text-align: center;
+     */
+     /*     
+     */
+     /* background-color: rgba(0, 0, 0, 0.5); */
+     justify-content: center;
+     align-items: center;
+     padding: 2px;
+     display: flex;
+     width: 100%;
+     top: 50%;
+     left: 50%;
+     z-index: 9999;
+     /* position: fixed; */
+}
+
+.modal form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .modal form label {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+.modal form input,
+.modal form textarea,
+.modal form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.modal form textarea {
+    resize: vertical;
+  }
+
+  .modal form input:focus,
+.modal form textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button[type="button"] {
+    background-color: #f44336;
+    margin-top: 10px;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #e53935;
+  }
+  
+  button[type="reset"] {
+    background-color: #ffa500;
+  }
+  
+  button[type="reset"]:hover {
+    background-color: #ff8c00;
+  }
+  
+  /* Center the modal content */
+  .modal form button[type="submit"] {
+    background-color: #4CAF50;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between; /* Distribute buttons evenly */
+    gap: 10px; /* Optional: gives some space between buttons */
+    margin-top: 20px; /* Adjusts spacing from other form elements */
+  }
+  
+  /* Button responsive behavior */
+  @media (max-width: 600px) {
+    /* Stack the buttons vertically on smaller screens */
+    .button-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    button {
+      width: 100%; /* Buttons take full width */
+      margin-bottom: 10px; /* Adds space between stacked buttons */
+    }
+  }

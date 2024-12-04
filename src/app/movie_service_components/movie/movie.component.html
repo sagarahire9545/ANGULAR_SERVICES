@@ -1,0 +1,62 @@
+<button (click)="openAddMovieForm()" mat-flat-button>Add Movie</button>
+
+<a routerLink="/movieList" mat-flat-button color="green">Movie Lists</a>
+
+    
+    <div *ngIf="isAddMovieFormVisible" class="modal">
+
+        <form [formGroup]="movieForm" (ngSubmit)= "onSubmit()">
+          <!-- Title -->
+          <label for="title">Title:</label>
+          <input id="title" formControlName="title" type="text" required/>
+      
+          <!-- Description -->
+          <label for="description">Description:</label>
+          <textarea id="description" formControlName="description" rows="3" required ></textarea>
+      
+          <!-- Cast -->
+          <label for="cast">Cast (Comma-separated):</label>
+          <input id="cast" formControlName="cast" type="text" />
+      
+          <!-- Release Date -->
+          <label for="releaseDate">Release Date:</label>
+          <input id="releaseDate" formControlName="releaseDate" type="date" required />
+      
+          <!-- Trailers -->
+          <label for="trailers">Trailers (Comma-separated URLs):</label>
+          <input id="trailers" formControlName="trailers" type="text"  />
+      
+          <!-- Photos -->
+          <label for="photos">Photos (Comma-separated URLs):</label>
+          <input id="photos" formControlName="photos" type="text"  />
+      
+          <!-- Rating -->
+          <label for="rating">Rating:</label>
+          <input id="rating" formControlName="rating" type="text" />
+      
+          <!-- Duration -->
+          <label for="duration">Duration (in minutes):</label>
+          <input id="duration" formControlName="duration" type="text"  />
+      
+          <!-- Language -->
+          <label for="language">Language:</label>
+          <input id="language" formControlName="language" type="text"  />
+      
+          <!-- Genre -->
+          <label for="genre">Genre:</label>
+          <input id="genre" formControlName="genre" type="text" required  />
+      
+          <div class="button-container">
+            <!-- Submit Button -->
+            <button type="submit">Add</button>
+            
+            <!-- Cancel Button -->
+            <button type="button" (click)="closeAddMovieForm()">Cancel</button>
+          
+            <!-- Reset Button -->
+            <button type="reset">Reset</button>
+          </div>
+        </form>
+
+
+    </div>

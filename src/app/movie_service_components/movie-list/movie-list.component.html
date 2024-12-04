@@ -1,0 +1,37 @@
+
+<div class="movie-list">
+    <h2>Movies</h2>
+    <table>
+    <thead>
+    <tr>
+    <th>ID</th>
+    <th>TITLE</th>
+    <th>DESCRITPION</th>
+    <th>CAST</th>
+    <th>RELEASE_DATE</th>
+    <th>TRAILERS</th>
+    <th>PHOTOS</th>
+    <th>RATING</th>
+    <th>DURATION</th>
+    <th>LANGUAGES</th>
+    <th>GENRE</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let movie of movies">
+    <td>{{ movie.id }}</td>
+    <td>{{ movie.title}}</td>
+    <td>{{ movie.description }}</td>
+    <td>{{ movie.cast }}</td>
+    <td>{{ movie.releaseDate }}</td>
+    <td>{{ movie.trailers}}</td>
+    <td>{{ movie.photos }}</td>
+    <td>{{ movie.rating }}</td>
+    <td>{{ movie.duration}}</td>
+    <td>{{ movie.language }}</td>
+    <td>{{ movie.genre }}</td>
+    </tr>
+    </tbody>
+    </table>
+   </div>
+   
